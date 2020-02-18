@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ball_back" />
+    <item android:drawable="@drawable/ball_top"
+        android:left="330dp"
+        android:right="330dp"
+        android:bottom="400dp"
+        android:top="410dp"/>
+    <item android:drawable="@drawable/text_back"
+        android:left="330dp"
+        android:right="330dp"
+        android:bottom="350dp"
+        android:top="400dp"/>
+</layer-list>
