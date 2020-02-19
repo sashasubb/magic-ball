@@ -1,4 +1,4 @@
-package com.example.magicball;
+package com.example.ball;
 
 import org.junit.Test;
 

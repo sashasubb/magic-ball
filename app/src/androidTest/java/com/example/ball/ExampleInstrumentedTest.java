@@ -1,4 +1,4 @@
-package com.example.magicball;
+package com.example.ball;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.magicball", appContext.getPackageName());
+        assertEquals("com.example.ball", appContext.getPackageName());
     }
 }

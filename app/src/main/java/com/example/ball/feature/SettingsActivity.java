@@ -1,23 +1,22 @@
-package com.example.magicball;
+package com.example.ball.feature;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
-import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.example.magicball.settings.IPreferenceRepository;
-import com.example.magicball.settings.SettingsRepository;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.ball.R;
+import com.example.ball.settings.IPreferenceRepository;
+import com.example.ball.settings.SettingsRepository;
 
 public class SettingsActivity extends AppCompatActivity {
 
     public static final String SETTINGS_CLICK_KEY = "click_key";
 
-    TextView privacyPolicy;
-    Switch settingsSwitch;
+    private TextView privacyPolicy;
+    private Switch settingsSwitch;
 
     private IPreferenceRepository preferenceRepository;
 
@@ -28,9 +27,12 @@ public class SettingsActivity extends AppCompatActivity {
         initRepository();
         settingsSwitch = findViewById(R.id.settings_switch);
         privacyPolicy = findViewById(R.id.privacy_policy);
-        settingsSwitch.setOnCheckedChangeListener((view, isCheck) -> {
-            this.settingsSwitch.setText(isCheck ? R.string.settings_activity_click : R.string.settings_activity_shake);
-        });
+        settingsSwitch.setOnCheckedChangeListener((view, isCheck) ->
+                this.settingsSwitch.setText(isCheck
+                        ? R.string.settings_activity_click
+                        : R.string.settings_activity_shake
+                )
+        );
         privacyPolicy.setMovementMethod(LinkMovementMethod.getInstance());
     }
 

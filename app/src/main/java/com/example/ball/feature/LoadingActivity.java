@@ -1,6 +1,4 @@
-package com.example.magicball;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.ball.feature;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +6,15 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.ball.R;
+
 public class LoadingActivity extends AppCompatActivity {
 
     private final int LOADING_DELAY = 4000;
 
-    ProgressBar progressBar;
+    private ProgressBar progressBar;
 
     private Handler handler = new Handler();
     private Runnable loadingWorker = () -> {

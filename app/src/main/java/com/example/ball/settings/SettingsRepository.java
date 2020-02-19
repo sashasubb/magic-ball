@@ -1,4 +1,4 @@
-package com.example.magicball.settings;
+package com.example.ball.settings;
 
 import android.content.Context;
 import android.content.SharedPreferences;
